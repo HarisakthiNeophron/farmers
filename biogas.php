@@ -223,8 +223,14 @@
                             <textarea type="text" id="address" name="address" placeholder="Address" class="form-control" required></textarea>
                          </div>
                      </div>
+                     <div class="form-group">
+                        <label for="address" class="col-sm-4 control-label">6). தேதி   <br> Date : </label>
+                        <div class="col-sm-8">
+                            <input type="date" id="date" name="date" placeholder="Date" class="form-control" required> 
+                         </div>
+                     </div>
                       <div class="form-group">
-                        <label for="sc_address" class="col-sm-4 control-label">6).Amount : </label>
+                        <label for="sc_address" class="col-sm-4 control-label">7).Amount : </label>
                         <div class="col-sm-8">
                             <input type="text" id="amount" name="amount" value="Rs.15000 /-" class="form-control" readonly required> 
                          </div>
