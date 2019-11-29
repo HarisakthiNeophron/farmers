@@ -23,9 +23,8 @@
 // } 
  
   if (isset($_POST['save_user_1'])) {
-  header('location:student.php');
+  header('location: student.php');
      
-   
     $student_name = $_POST['student_name']; 
     $farmers_name = $_POST['farmers_name'];
     $dob = $_POST['dob'];
@@ -43,7 +42,7 @@
     $updated_to = $_POST['updated_to'];
     $date = $_POST['date'];
     $profileImageName = time() . '_' . $_FILES['profileImage']['name'];
-        $target = 'upload/' . $profileImageName;
+        $target = 'upload_2/' . $profileImageName;
     
     if(move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)){
        $sql = "INSERT INTO student_scholarship (profile_image,student_name,farmers_name,dob,student_age,student_aadhar,student_contact,address,religion,cast,bank_account,student_year,student_address,amount,created_to,updated_to,date) VALUES ('$profileImageName','$student_name','$farmers_name','$dob','$student_age','$student_aadhar','$student_contact','$address','$religion','$cast','$bank_account','$student_year','$student_address','$amount','$created_to','$updated_to','$date')";
@@ -62,7 +61,6 @@
       $cls_class = "alert-danger";
     }
   }
-
 
 ///Insert Biogs
 if(isset($_POST['submit_1']))

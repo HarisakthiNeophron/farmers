@@ -287,14 +287,21 @@ include('connection.php');
         </div>
     </div>
     <div class="form-group row">
-         <label for="amount" class="col-sm-4 control-label">13.) Amount : </label>
+         <label for="amount" class="col-sm-4 control-label">13.) தேதி <br> Date : </label>
+        <div class="col-sm-8">
+            <input type="date" id="date" name="date"   class="form-control" equired> 
+
+        </div>
+    </div>
+    <div class="form-group row">
+         <label for="amount" class="col-sm-4 control-label">14.) Amount : </label>
         <div class="col-sm-8">
             <input type="text" id="sc_address" name="amount" value="Rs.150 /-" class="form-control"  accept="image/x-png,image/gif,image/jpeg" readonly required> 
 
         </div>
     </div> 
     <div class="form-group row">
-         <label for="photo" class="col-sm-4 control-label">14.) Photo : </label>
+         <label for="photo" class="col-sm-4 control-label">15.) Photo : </label>
         <div class="col-sm-8">
             <img src="images/dummy.jpg" onclick="triggerClick()" id="profileDisplay"hidden />
 
