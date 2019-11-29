@@ -20,8 +20,7 @@
 // { 
 // header("Location:student.php");
 // }
-// }
-  $conn = mysqli_connect('localhost', 'root', '','ngo');
+// } 
  
   if (isset($_POST['save_user_1'])) {
   header('location:student.php');
@@ -74,8 +73,7 @@ $student_aadhar=$_POST['student_aadhar'];
 $contact=$_POST['contact'];
 $address=$_POST['address']; 
 $amount=$_POST['amount'];
-$created_to = $_POST['created_to'];
-$date = $_POST['date'];
+$created_to = $_POST['created_to']; 
 $updated_to = $_POST['updated_to'];
 $date = $_POST['date'];
 
