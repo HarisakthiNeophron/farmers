@@ -246,6 +246,13 @@
 																</div>
 															</div>
 															<div class="form-group row">
+																<label class="col-sm-2 col-form-label">   தேதி  <br> Date: </label>
+																<div class="col-sm-10">
+																	<input type="date" id="date" name="date"  placeholder="Date" class="form-control" required>
+																	 
+																</div>
+															</div>
+															<div class="form-group row">
 																<label class="col-sm-2 col-form-label"> முகவரி   <br> Address : </label>
 																<div class="col-sm-10">
 																	<textarea type="text" id="address" name="address" placeholder="Address" class="form-control" required></textarea>
