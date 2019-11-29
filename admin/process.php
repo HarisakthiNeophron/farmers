@@ -46,11 +46,12 @@
     $amount = $_POST['amount'];
     $created_to = $_POST['created_to'];
     $updated_to = $_POST['updated_to'];
+    $date = $_POST['date'];
   	$profileImageName = time() . '_' . $_FILES['profileImage']['name'];
   	    $target = '../upload_2/' . $profileImageName;
     
     if(move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)){
-       $sql = "INSERT INTO student_scholarship (profile_image,student_name,farmers_name,dob,student_age,student_aadhar,student_contact,address,religion,cast,bank_account,student_year,student_address,amount,created_to,updated_to) VALUES ('$profileImageName','$student_name','$farmers_name','$dob','$student_age','$student_aadhar','$student_contact','$address','$religion','$cast','$bank_account','$student_year','$student_address','$amount','$created_to','$updated_to')";
+       $sql = "INSERT INTO student_scholarship (profile_image,student_name,farmers_name,dob,student_age,student_aadhar,student_contact,address,religion,cast,bank_account,student_year,student_address,amount,created_to,updated_to,date) VALUES ('$profileImageName','$student_name','$farmers_name','$dob','$student_age','$student_aadhar','$student_contact','$address','$religion','$cast','$bank_account','$student_year','$student_address','$amount','$created_to','$updated_to','$date')";
        if(mysqli_query($conn, $sql)){
        	$msg = "Image uploaded & saved to database";
         $cls_class = "alert-success";
@@ -122,7 +123,8 @@ $address=$_POST['address'];
 $amount=$_POST['amount']; 
  $created_to = $_POST['created_to'];
     $updated_to = $_POST['updated_to'];
-$ins=mysqli_query($conn,"INSERT INTO biogas_scholarship values(DEFAULT,'$firstname','$father_name','$student_aadhar','$contact','$address','$amount','$created_to','$updated_to')");
+     $date = $_POST['date'];
+$ins=mysqli_query($conn,"INSERT INTO biogas_scholarship values(DEFAULT,'$firstname','$father_name','$student_aadhar','$contact','$address','$amount','$created_to','$updated_to','$date')");
 if($ins)
 { 
 	echo "<script type='text/javascript'>\n"; 
@@ -147,7 +149,7 @@ if(isset($_POST['edit_biogas']))
 	$id=$_POST['id'];
 
 
-	$ins=mysqli_query($conn,"UPDATE biogas_scholarship set firstname='$firstname',father_name='$father_name',student_aadhar='$student_aadhar',contact='$contact',address='$address',amount='$amount',created_to='$created_to',updated_to='$updarted_to' where id='$id'");
+	$ins=mysqli_query($conn,"UPDATE biogas_scholarship set firstname='$firstname',father_name='$father_name',student_aadhar='$student_aadhar',contact='$contact',address='$address',amount='$amount',created_to='$created_to',updated_to='$updarted_to',date='$date' where id='$id'");
 	if($ins)
 	{ 
 		header("Location:biogas_display.php");
@@ -178,7 +180,8 @@ $address=$_POST['address'];
 $amount=$_POST['amount'];
 $created_to = $_POST['created_to'];
 $updated_to = $_POST['updated_to'];
-$ins=mysqli_query($conn,"INSERT INTO solar_scholarship values(DEFAULT,'$firstname','$father_name','$student_aadhar','$contact','$address','$amount','$created_to','$updated_to')");
+ $date = $_POST['date'];
+$ins=mysqli_query($conn,"INSERT INTO solar_scholarship values(DEFAULT,'$firstname','$father_name','$student_aadhar','$contact','$address','$amount','$created_to','$updated_to','$date')");
 if($ins)
 { 
 	echo "<script type='text/javascript'>\n"; 

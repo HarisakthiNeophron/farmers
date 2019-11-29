@@ -212,6 +212,13 @@
 																</div>
 															</div>
 															<div class="form-group row">
+																<label class="col-sm-2 col-form-label"> தேதி    <br>  Date:  </label>
+																<div class="col-sm-10">
+																	 <input type="date" id="date" name="date" placeholder=" Date" class="form-control" required>
+																	 
+																</div>
+															</div>
+															<div class="form-group row">
 																<label class="col-sm-2 col-form-label"> தொடர்ப்பு என்  <br> Contact No: </label>
 																<div class="col-sm-10">
 																	<input type="text" id="contact" name="contact" placeholder="Contact Number" class="form-control" required>
