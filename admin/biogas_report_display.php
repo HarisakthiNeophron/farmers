@@ -10,8 +10,14 @@ $firstname = $name;
 
 
  	mysqli_select_db($conn,"ajax_demo");
- 	if ($firstname == 0) {
+  
+
+ 	if ($firstname == 0 && $from_date && $to_date) {
  		$sql="SELECT * FROM biogas_scholarship WHERE date >= '".$from_date."' AND date <= ".$to_date."";
+ 	}elseif($firstname == 0){
+ 		$sql="SELECT * FROM biogas_scholarship";	
+ 	}elseif($firstname && $from_date && $to_date){
+ 		$sql="SELECT * FROM biogas_scholarship WHERE date >= '".$from_date."' AND date <= ".$to_date." AND id = ".$firstname."";	
  	}else{
  		$sql="SELECT * FROM biogas_scholarship WHERE id = '".$firstname."'";	
  	}
